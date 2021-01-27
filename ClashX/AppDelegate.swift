@@ -199,7 +199,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItemView.updateViewStatus(enableProxy: ConfigManager.shared.proxyPortAutoSet)
 
         LaunchAtLogin.shared
-            .isEnableVirable
+            .isEnableVariable
             .asObservable()
             .subscribe(onNext: { [weak self] enable in
                 guard let self = self else { return }
